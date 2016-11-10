@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GDeme</string>
+
+
+    <!-- 按鈕 -->
+    <string name="bun_click_name">點擊測試</string>
+
+    <!-- TextView -->
+    <string name="TextDemo_name">一個TextV</string>
 </resources>
