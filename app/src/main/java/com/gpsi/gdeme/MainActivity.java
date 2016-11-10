@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import org.xutils.x;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
