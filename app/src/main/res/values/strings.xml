@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GDeme</string>
     <!-- 按鈕 -->
-    <string name="bun_click_name">點擊測試</string>
+    <string name="bun_click_name">点击测试</string>
     <!-- TextView -->
     <string name="TextDemo_name">一個TextV的簡單測試</string>
 </resources>

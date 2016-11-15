@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.gpsi.gdeme.GlobalApp;
 
+import org.greenrobot.eventbus.EventBus;
 import org.xutils.x;
 
 /**
@@ -16,5 +17,7 @@ public class InitUtils {
     public static void init(Application context){
 
         x.Ext.init(context);
+
     }
+
 }
