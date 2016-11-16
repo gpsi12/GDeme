@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="154px"
+        android:layout_marginRight="154px"
+        android:layout_marginTop="196px"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/login_log_click"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/login"
+                android:textColor="@color/color_login_pressed"
+                android:textSize="@dimen/textsize_login" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4px"
+                android:layout_marginTop="30px"
+                android:background="@color/color_login_pressed"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/login_register_click"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/register"
+                android:textColor="@color/color_login_normal"
+                android:textSize="@dimen/textsize_login"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4px"
+                android:layout_marginTop="30px"
+                android:background="@color/white"></View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- -->
+    <include
+        layout="@layout/activity_login_register"
+
+        android:visibility="gone"
+        android:id="@+id/login_register_vib"></include>
+
+    <include
+        layout="@layout/activity_login_log"
+        android:visibility="visible"
+        android:id="@+id/login_log_vib"></include>
+
+
+</LinearLayout>

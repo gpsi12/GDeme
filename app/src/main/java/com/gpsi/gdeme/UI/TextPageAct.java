@@ -1,8 +1,8 @@
-package com.gpsi.gdeme.UI;
+package com.gpsi.gdeme.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 
 import com.gpsi.gdeme.R;
@@ -13,7 +13,7 @@ import org.greenrobot.eventbus.EventBus;
 /**
  * Created by Administrator on 2016-11-14.
  */
-public class TextPage extends Activity {
+public class TextPageAct extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,8 @@ public class TextPage extends Activity {
 
     public  void TextPage_C(View view){
 
+        Intent intent = new Intent(TextPageAct.this,LoginAct.class);
+        startActivity(intent);
         EventBus.getDefault().post(new FirstEvent("、测试EventBus。"));
     }
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/include_login_log"
+    android:layout_marginLeft="50px">
+
+    <EditText
+        android:layout_width="@dimen/editText_width_login"
+        android:layout_height="@dimen/editText_height_login"
+        android:hint="@string/login_name_hint"
+        android:textSize="@dimen/editTextsize_login"
+        android:id="@+id/editText" />
+
+    <EditText
+        android:layout_width="@dimen/editText_width_login"
+        android:layout_height="@dimen/editText_height_login"
+        android:hint="@string/login_psw_hint"
+        android:textSize="@dimen/editTextsize_login"
+        />
+
+    <TextView
+        android:layout_marginTop="32px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26px"
+        android:textColor="#423f3f"
+        android:text="@string/login_forget_psw"
+        android:layout_gravity="right"/>
+
+    <Button
+        android:layout_width="@dimen/editText_width_login"
+        android:layout_height="@dimen/editText_height_login"
+        android:text="登陆"
+        android:background="#FFFFFF"
+        android:textSize="36px"
+        android:gravity="center"/>
+
+</LinearLayout>

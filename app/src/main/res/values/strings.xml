@@ -4,4 +4,10 @@
     <string name="bun_click_name">点击测试</string>
     <!-- TextView -->
     <string name="TextDemo_name">一個TextV的簡單測試</string>
+    <string name="login">登陸</string>
+    <string name="register">注冊</string>
+    
+    <string name="login_name_hint">用户名/手机号</string>
+    <string name="login_psw_hint">密码</string>
+    <string name="login_forget_psw">忘记密码？</string>
 </resources>

@@ -5,13 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.gpsi.gdeme.UI.TextPage;
+import com.gpsi.gdeme.ui.TextPageAct;
 import com.gpsi.gdeme.utils.FirstEvent;
 
 import org.greenrobot.eventbus.EventBus;
-import org.xutils.x;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     public void oneCl(View view){
         //Toast.makeText(MainActivity.this, "就是吐一下!", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(MainActivity.this, TextPage.class);
+        Intent intent = new Intent(MainActivity.this, TextPageAct.class);
         startActivity(intent);
         /**
          * 借用

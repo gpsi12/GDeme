@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".UI.TextPage"></activity>
+        <activity android:name=".ui.TextPageAct"></activity>
+        <activity android:name=".ui.LoginAct"></activity>
     </application>
 
 </manifest>

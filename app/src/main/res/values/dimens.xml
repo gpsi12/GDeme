@@ -2,4 +2,12 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="textsize_login">40px</dimen>
+    <dimen name="editText_width_login">651px</dimen>
+    <dimen name="editText_height_login">94px</dimen>
+    <dimen name="editTextsize_login">32px</dimen>
+
+
+
 </resources>

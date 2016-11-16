@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="50px"
+    android:layout_marginRight="50px"
+    android:id="@+id/include_login_register"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="102px"
+        android:alpha="0.4"
+        android:maxLines="2"
+        android:background="#DC2A2A"
+        android:gravity="center"
+        android:text="哈哈哈哈哈哈哈哈哈哈哈就开始大家都是借士大夫的萨菲山大口说的空间"
+        android:textColor="#E27475" />
+
+    <com.gpsi.gdeme.widget.OwnEditText
+        android:layout_marginTop="32px"
+        android:layout_width="match_parent"
+        android:layout_height="92px"
+        >
+    </com.gpsi.gdeme.widget.OwnEditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32px"
+        android:layout_gravity="center_vertical">
+        <com.gpsi.gdeme.widget.OwnEditText
+            android:layout_weight="1"
+            android:layout_width="354px"
+            android:layout_height="92px"
+
+            >
+        </com.gpsi.gdeme.widget.OwnEditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="92px"
+            android:text="点击获取验证码"
+            android:textSize="32px"
+            android:textColor="#423F3F"
+            android:id="@+id/button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24px"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册即认为同意"
+            android:textColor="#423F3F"
+            android:textSize="26px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册协议"
+            android:textColor="#423F3F"
+            android:textSize="26px"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="654px"
+        android:layout_height="92px"
+        android:layout_marginTop="62px"
+        android:text="下一步"
+        android:textSize="36px"
+        android:gravity="center"
+        android:background="#DC2A2A"
+        android:textColor="#FFFFFF"
+        />
+
+</LinearLayout>
