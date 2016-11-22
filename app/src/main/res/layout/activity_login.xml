@@ -29,6 +29,7 @@
                 android:textSize="@dimen/textsize_login" />
 
             <View
+                android:id="@+id/login_underscore"
                 android:layout_width="match_parent"
                 android:layout_height="4px"
                 android:layout_marginTop="30px"

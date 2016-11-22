@@ -6,6 +6,7 @@ import android.text.SpannedString;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -25,19 +26,20 @@ public class OwnEditText extends FrameLayout {
     private EditText editText;
     private ImageView imageBtn;
 
-    public OwnEditText(Context context){
+    public OwnEditText(Context context) {
         super(context);
     }
 
-    public OwnEditText(Context context, AttributeSet attrs){
-        super(context,attrs);
-        LayoutInflater.from(context).inflate(R.layout.own_edittext,this,true);
-        this.editText= (EditText) findViewById(R.id.edittext_own);
+    public OwnEditText(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        LayoutInflater.from(context).inflate(R.layout.own_edittext, this, true);
+        this.editText = (EditText) findViewById(R.id.edittext_own);
         this.imageBtn = (ImageView) findViewById(R.id.imageview_own);
         this.editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 //可以判断框内是否有内容，是否显示、隐藏一些东西。
+
             }
 
             @Override
@@ -58,11 +60,12 @@ public class OwnEditText extends FrameLayout {
             }
         });
     }
-    public String getContent(){
+
+    public String getContent() {
         return editText.getText().toString();
     }
 
-    public void setText(CharSequence text, TextView.BufferType type){
+    public void setText(CharSequence text, TextView.BufferType type) {
 
     }
 }

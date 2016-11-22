@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:id="@+id/include_login_log"
-    android:layout_marginLeft="50px">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50px"
+    android:orientation="vertical">
 
     <EditText
+        android:id="@+id/editText_login_name"
         android:layout_width="@dimen/editText_width_login"
         android:layout_height="@dimen/editText_height_login"
+        android:background="@null"
         android:hint="@string/login_name_hint"
-        android:textSize="@dimen/editTextsize_login"
-        android:id="@+id/editText" />
+        android:maxLines="1"
+        android:textSize="@dimen/editTextsize_login" />
 
     <EditText
+        android:id="@+id/editText_login_psw"
         android:layout_width="@dimen/editText_width_login"
         android:layout_height="@dimen/editText_height_login"
+        android:layout_marginTop="32px"
+        android:background="@null"
         android:hint="@string/login_psw_hint"
-        android:textSize="@dimen/editTextsize_login"
-        />
+        android:maxLines="1"
+        android:textSize="@dimen/editTextsize_login" />
 
     <TextView
-        android:layout_marginTop="32px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="26px"
-        android:textColor="#423f3f"
+        android:layout_gravity="right"
+        android:layout_marginTop="32px"
         android:text="@string/login_forget_psw"
-        android:layout_gravity="right"/>
+        android:textColor="#423f3f"
+        android:textSize="26px" />
 
     <Button
+        android:id="@+id/btn_login_send"
         android:layout_width="@dimen/editText_width_login"
         android:layout_height="@dimen/editText_height_login"
-        android:text="登陆"
         android:background="#FFFFFF"
-        android:textSize="36px"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="登陆"
+        android:textSize="36px" />
 
 </LinearLayout>
