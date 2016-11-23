@@ -1,6 +1,7 @@
 package com.gpsi.gdeme.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gpsi.gdeme.R;
@@ -33,6 +35,8 @@ public class LoginAct extends Activity implements View.OnClickListener {
     EditText editText_login_name;
     EditText editText_login_psw;
 
+    TextView register_next;
+
     View underscore;
 
     private static final String TAG = "Gpsi";
@@ -53,6 +57,9 @@ public class LoginAct extends Activity implements View.OnClickListener {
         editText_login_psw = (EditText) findViewById(R.id.editText_login_psw);
 
         underscore = findViewById(R.id.login_underscore);
+
+        register_next = (TextView) findViewById(R.id.register_next);
+        register_next.setOnClickListener(this);
         ;
 
     }
@@ -75,6 +82,10 @@ public class LoginAct extends Activity implements View.OnClickListener {
                     include_log.setVisibility(View.GONE);
                 }
                 break;
+            case R.id.register_next:
+                //注册协议
+
+                break;
             case R.id.btn_login_send:
                 //登陆按钮点击
                 login();
@@ -84,17 +95,21 @@ public class LoginAct extends Activity implements View.OnClickListener {
             case R.id.btn_register_send:
                 //注册
 
+
+
                 break;
+
         }
     }
 
 
     /**
-     * 登陆功能实现
+     * 登陆功能实现，简单实现
      */
     private void login() {
         if (TextUtils.isEmpty(editText_login_name.getText())) {
 
+            Toast.makeText(LoginAct.this, "账户不能为空!", Toast.LENGTH_SHORT).show();
             Toast.makeText(LoginAct.this, "账户不能为空!", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -117,6 +132,8 @@ public class LoginAct extends Activity implements View.OnClickListener {
             @Override
             public void onSuccess(String s) {
                 Log.i(TAG, "成功：" + s.toString());
+                Intent intent = new Intent(LoginAct.this,PhotoAlbumAct.class);
+                startActivity(intent);
             }
 
             @Override
@@ -136,6 +153,5 @@ public class LoginAct extends Activity implements View.OnClickListener {
             }
         });
     }
-
 
 }

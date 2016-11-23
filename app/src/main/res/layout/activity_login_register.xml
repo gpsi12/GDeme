@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:OwnEditText="http://schemas.android.com/apk/res-auto"
     android:id="@+id/include_login_register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,10 +18,10 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="提示：您将要注册的手机号，请确认乐简系统用户已经将您添加为家庭成员。"
             android:layout_marginLeft="20px"
             android:layout_marginRight="20px"
+            android:gravity="center_vertical"
+            android:text="提示：您将要注册的手机号，请确认乐简系统用户已经将您添加为家庭成员。"
             android:textColor="#E27475"
             android:textSize="26px" />
     </LinearLayout>
@@ -29,7 +30,10 @@
     <com.gpsi.gdeme.widget.OwnEditText
         android:layout_width="match_parent"
         android:layout_height="92px"
-        android:layout_marginTop="32px"></com.gpsi.gdeme.widget.OwnEditText>
+        android:layout_marginTop="32px"
+        OwnEditText:mhint="哈哈哈哈"
+        OwnEditText:mtextColor="#FFFFFF"
+        OwnEditText:mtextSize="50px"></com.gpsi.gdeme.widget.OwnEditText>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,6 +72,7 @@
             android:textSize="26px" />
 
         <TextView
+            android:id="@+id/register_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="注册协议"

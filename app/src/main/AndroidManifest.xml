@@ -21,6 +21,7 @@
 
         <activity android:name=".ui.TextPageAct"></activity>
         <activity android:name=".ui.LoginAct"></activity>
+        <activity android:name=".ui.PhotoAlbumAct"></activity>
     </application>
 
 </manifest>

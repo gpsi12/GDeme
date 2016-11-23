@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OwnEditText">
+        <attr name="mtextColor" format="color"></attr>
+        <attr name="mtextSize" format="dimension"></attr>
+        <attr name="mhint" format="string"></attr>
+    </declare-styleable>
+</resources>
