@@ -25,6 +25,6 @@ public class TextPageAct extends Activity {
 
         Intent intent = new Intent(TextPageAct.this,LoginAct.class);
         startActivity(intent);
-        EventBus.getDefault().post(new FirstEvent("、测试EventBus。"));
+//        EventBus.getDefault().post(new FirstEvent("、测试EventBus。"));
     }
 }

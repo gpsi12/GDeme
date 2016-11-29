@@ -15,7 +15,6 @@
         android:gravity="center">
 
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20px"
@@ -26,14 +25,17 @@
             android:textSize="26px" />
     </LinearLayout>
 
-
-    <com.gpsi.gdeme.widget.OwnEditText
+    <com.gpsi.gdeme.widget.WithDelEditText
         android:layout_width="match_parent"
         android:layout_height="92px"
+        android:hint="用户名/手机号"
+        android:textColor="#afa7a7"
+        android:background="@drawable/bg_rounded_edittext"
+        android:gravity="center_vertical"
+        android:paddingLeft="22px"
         android:layout_marginTop="32px"
-        OwnEditText:mhint="哈哈哈哈"
-        OwnEditText:mtextColor="#FFFFFF"
-        OwnEditText:mtextSize="50px"></com.gpsi.gdeme.widget.OwnEditText>
+
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,8 +47,9 @@
             android:layout_width="354px"
             android:layout_height="92px"
             android:layout_weight="1"
+            OwnEditText:mhint="55555555">
 
-            ></com.gpsi.gdeme.widget.OwnEditText>
+        </com.gpsi.gdeme.widget.OwnEditText>
 
         <Button
             android:id="@+id/button"

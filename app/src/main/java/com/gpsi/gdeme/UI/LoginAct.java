@@ -1,9 +1,11 @@
 package com.gpsi.gdeme.ui;
 
 import android.app.Activity;
+import android.app.usage.UsageEvents;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -13,9 +15,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.google.gson.Gson;
+import com.gpsi.gdeme.GlobalApp;
 import com.gpsi.gdeme.R;
 import com.gpsi.gdeme.api.ApiContants;
+import com.gpsi.gdeme.bean.LoginBean;
+import com.gpsi.gdeme.utils.MessageEvent;
 
+import org.greenrobot.eventbus.EventBus;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
@@ -36,7 +45,6 @@ public class LoginAct extends Activity implements View.OnClickListener {
     EditText editText_login_psw;
 
     TextView register_next;
-
     View underscore;
 
     private static final String TAG = "Gpsi";
@@ -60,7 +68,7 @@ public class LoginAct extends Activity implements View.OnClickListener {
 
         register_next = (TextView) findViewById(R.id.register_next);
         register_next.setOnClickListener(this);
-        ;
+//        EventBus.getDefault().register(this);
 
     }
 
@@ -94,7 +102,6 @@ public class LoginAct extends Activity implements View.OnClickListener {
 
             case R.id.btn_register_send:
                 //注册
-
 
 
                 break;
@@ -131,15 +138,14 @@ public class LoginAct extends Activity implements View.OnClickListener {
         x.http().post(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String s) {
-                Log.i(TAG, "成功：" + s.toString());
-                Intent intent = new Intent(LoginAct.this,PhotoAlbumAct.class);
-                startActivity(intent);
+                dealData(s);
+//                Log.i(TAG, "成功：" + s.toString());
             }
 
             @Override
             public void onError(Throwable throwable, boolean b) {
 
-                Log.i(TAG, "onError:" + throwable.toString());
+                Log.i(TAG, "onError1:" + throwable.toString());
             }
 
             @Override
@@ -154,4 +160,25 @@ public class LoginAct extends Activity implements View.OnClickListener {
         });
     }
 
+    private void dealData(String result) {
+        Gson g = new Gson();
+        LoginBean logB = g.fromJson(result, LoginBean.class);
+
+        if (null != logB && logB.isStatus()) {
+            Log.i(TAG, logB.getDescription().toString());
+            EventBus.getDefault().post(new MessageEvent(logB.getResult().getAccount()));
+            Log.i(TAG, logB.getResult().getAccount());
+            Log.i(TAG, logB.getDescription().toString() + ",跳转");
+            PhotoAlbumAct.newIntent(this, logB.getResult().getAccount());
+            finish();
+        } else {
+            Toast.makeText(this, "login failed", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+//        EventBus.getDefault().unregister(this);
+    }
 }

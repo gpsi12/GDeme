@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+
     android:layout_height="92px">
 
     <EditText
         android:id="@+id/edittext_own"
         android:layout_width="match_parent"
         android:layout_height="92px"
+
         android:textSize="32px"
         android:layout_gravity="center_vertical"
         android:maxLines="1"
