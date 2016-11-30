@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    
+
     <color name="color_login_pressed">#DC2A2A</color>
     <color name="color_login_normal">#423F3F</color>
     <color name="color_editText">#8E8787</color>

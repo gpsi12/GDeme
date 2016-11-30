@@ -3,24 +3,24 @@
     android:id="@+id/include_login_log"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="50px"
+    android:layout_marginLeft="@dimen/x50"
     android:orientation="vertical">
 
-    <EditText
+    <com.gpsi.gdeme.widget.WithDelEditText
         android:id="@+id/editText_login_name"
-        android:layout_width="@dimen/editText_width_login"
-        android:layout_height="@dimen/editText_height_login"
-        android:background="@null"
+        android:layout_width="@dimen/x651"
+        android:layout_height="@dimen/y94"
+        android:background="@drawable/bg_rounded_edittext"
         android:hint="@string/login_name_hint"
         android:maxLines="1"
         android:textSize="@dimen/editTextsize_login" />
 
-    <EditText
+    <com.gpsi.gdeme.widget.WithDelEditText
         android:id="@+id/editText_login_psw"
-        android:layout_width="@dimen/editText_width_login"
-        android:layout_height="@dimen/editText_height_login"
-        android:layout_marginTop="32px"
-        android:background="@null"
+        android:layout_width="@dimen/x651"
+        android:layout_height="@dimen/y94"
+        android:layout_marginTop="@dimen/y32"
+        android:background="@drawable/bg_rounded_edittext"
         android:hint="@string/login_psw_hint"
         android:maxLines="1"
         android:textSize="@dimen/editTextsize_login" />
@@ -29,16 +29,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginTop="32px"
+        android:layout_marginTop="@dimen/y32"
         android:text="@string/login_forget_psw"
         android:textColor="#423f3f"
         android:textSize="26px" />
 
     <Button
         android:id="@+id/btn_login_send"
-        android:layout_width="@dimen/editText_width_login"
-        android:layout_height="@dimen/editText_height_login"
-        android:background="#FFFFFF"
+        android:layout_width="@dimen/x651"
+        android:layout_height="@dimen/y94"
+        android:background="#DC2A2A"
+        android:textColor="#FFFFFF"
         android:gravity="center"
         android:text="登陆"
         android:textSize="36px" />
