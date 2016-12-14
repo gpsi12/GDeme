@@ -43,6 +43,7 @@ public class LoginAct extends Activity implements View.OnClickListener {
     View include_register;
     Button btn_login;
     Button register_getcode;
+    Button btn_register_next;
     WithDelEditText register_et_phone;
     WithDelEditText register_et_code;
 
@@ -69,6 +70,8 @@ public class LoginAct extends Activity implements View.OnClickListener {
         include_register = findViewById(R.id.login_register_vib);
         btn_login = (Button) findViewById(R.id.btn_login_send);
         btn_login.setOnClickListener(this);
+        btn_register_next = (Button) findViewById(R.id.btn_register_next);
+        btn_register_next.setOnClickListener(this);
         register_getcode = (Button) findViewById(R.id.register_getcode);
         register_getcode.setOnClickListener(this);
         editText_login_name = (EditText) findViewById(R.id.editText_login_name);
@@ -129,9 +132,9 @@ public class LoginAct extends Activity implements View.OnClickListener {
                 login();
 
                 break;
-            case R.id.btn_register_send:
+            case R.id.btn_register_next:
                 //注册
-                register();
+                register_next();
                 break;
             case R.id.register_getcode:
                 //获取验证码
@@ -143,10 +146,12 @@ public class LoginAct extends Activity implements View.OnClickListener {
     }
 
     /**
-     * 注册
+     * 注册下一步
      */
-    private void register() {
-
+    private void register_next() {
+        Intent intent = new Intent(LoginAct.this,RegistrySetting.class);
+        startActivity(intent);
+        //携带手机号码过去
     }
 
 
@@ -210,7 +215,7 @@ public class LoginAct extends Activity implements View.OnClickListener {
             Log.i(TAG, logB.getResult().getAccount());
             Log.i(TAG, logB.getDescription().toString() + ",跳转");
             PhotoAlbumAct.newIntent(this, logB.getResult().getAccount());
-            finish();
+//            finish();
         } else {
             Toast.makeText(this, "login failed", Toast.LENGTH_SHORT).show();
         }

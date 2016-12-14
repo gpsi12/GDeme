@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登陆设置"
+        android:textColor="#423f3f"
+        android:textSize="36px"
+        android:gravity="center"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y68"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_marginRight="@dimen/x50"
+        android:textColor="#afa7a7"
+        android:textSize="32px"
+        android:background="@drawable/bg_rounded_edittext"
+        android:hint="用户名6-16位"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_marginRight="@dimen/x50"
+        android:textColor="#afa7a7"
+        android:textSize="32px"
+        android:background="@drawable/bg_rounded_edittext"
+        android:hint="密码6-16位"
+        />
+    <Button
+        android:layout_width="@dimen/x654"
+        android:layout_height="@dimen/y92"
+        android:layout_marginTop="@dimen/y78"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_marginRight="@dimen/x50"
+        android:textColor="#ffffff"
+        android:textSize="36px"
+        android:text="提交"
+        android:background="#e15353"
+
+        />
+
+
+
+
+</LinearLayout>

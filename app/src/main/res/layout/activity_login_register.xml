@@ -90,7 +90,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_register_send"
+        android:id="@+id/btn_register_next"
         android:layout_width="@dimen/x654"
         android:layout_height="@dimen/y92"
         android:layout_marginTop="@dimen/y62"
