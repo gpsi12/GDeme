@@ -22,7 +22,8 @@
         <activity android:name=".ui.TextPageAct"></activity>
         <activity android:name=".ui.LoginAct"></activity>
         <activity android:name=".ui.PhotoAlbumAct"></activity>
-        <activity android:name=".ui.RegistrySetting"></activity>
+        <activity android:name=".ui.RegistrySettingAct"></activity>
+        <activity android:name=".ui.RegisterprotocolAct"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f6f5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="服务协议"
+        android:textColor="#423f3f"
+        android:textSize="36px" />
+
+    <com.gpsi.gdeme.widget.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginTop="@dimen/y52"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:text="文字描述"
+                    android:textColor="#423f3f"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y40"
+                    android:text="@string/register_protocl_1"
+                    android:textColor="#423f3f"
+                    android:textSize="28px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginTop="@dimen/y52"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="服务约定"
+                    android:textColor="#423f3f"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y40"
+                    android:text="@string/register_protocl_2"
+                    android:textColor="#423f3f"
+                    android:textSize="28px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginTop="@dimen/y52"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="用户账号"
+                    android:textColor="#423f3f"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y40"
+                    android:text="@string/register_protocl_3"
+                    android:textColor="#423f3f"
+                    android:textSize="28px" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.gpsi.gdeme.widget.BounceScrollView>
+
+
+</LinearLayout>

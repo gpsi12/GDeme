@@ -1,12 +1,10 @@
 package com.gpsi.gdeme.ui;
 
 import android.app.Activity;
-import android.app.usage.UsageEvents;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -16,10 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.google.gson.Gson;
-import com.gpsi.gdeme.GlobalApp;
 import com.gpsi.gdeme.R;
 import com.gpsi.gdeme.api.ApiContants;
 import com.gpsi.gdeme.bean.LoginBean;
@@ -125,7 +120,9 @@ public class LoginAct extends Activity implements View.OnClickListener {
                 break;
             case R.id.register_protocol:
                 //注册协议
-                Toast.makeText(LoginAct.this, "注册协议", Toast.LENGTH_LONG).show();
+//                Toast.makeText(LoginAct.this, "注册协议", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(LoginAct.this, RegisterprotocolAct.class);
+                startActivity(intent);
                 break;
             case R.id.btn_login_send:
                 //登陆按钮点击
@@ -149,9 +146,10 @@ public class LoginAct extends Activity implements View.OnClickListener {
      * 注册下一步
      */
     private void register_next() {
-        Intent intent = new Intent(LoginAct.this,RegistrySetting.class);
+        Intent intent = new Intent(LoginAct.this, RegistrySettingAct.class);
         startActivity(intent);
         //携带手机号码过去
+
     }
 
 
@@ -246,14 +244,14 @@ public class LoginAct extends Activity implements View.OnClickListener {
     /**
      * 开始倒计时
      */
-    public void restart(){
+    public void restart() {
         mTimer.start();
     }
 
     /**
      * 结束倒计时
      */
-    public void oncancel(){
+    public void oncancel() {
         mTimer.cancel();
     }
 
@@ -269,6 +267,6 @@ public class LoginAct extends Activity implements View.OnClickListener {
      */
     public void getVerifyCode() {
         String code = register_et_phone.getText().toString();
-        Log.i(TAG,code);
+        Log.i(TAG, code);
     }
 }

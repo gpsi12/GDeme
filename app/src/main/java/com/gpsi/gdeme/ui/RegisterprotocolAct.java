@@ -7,14 +7,14 @@ import com.gpsi.gdeme.R;
 
 /**
  * 类描述：
- * Created by Gpsi on 2016-12-14.
+ * Created by Gpsi on 2016-12-19.
  */
 
-public class RegistrySetting extends Activity {
+public class RegisterprotocolAct extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_register_1);
+        setContentView(R.layout.activity_register_protocol);
     }
 }
