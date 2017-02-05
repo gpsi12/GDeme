@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FF0000"
-        android:text="156156ghjkl,;jhgfdfghbjn"/>
+        android:text="156156ghjkl,;jhgfdfghbjn"
+        android:textColor="#FF0000" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="TextPage_C"
-        android:text="EventBus测试"/>
+        android:text="家" />
 
+    <ImageView
+        android:id="@+id/image_spin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/pingguo" />
+
+    <Button
+        android:id="@+id/btn_spin"
+        android:onClick="btn_spin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="旋转" />
+
+    <Button
+        android:id="@+id/btn_qqqun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btn_qqqun"
+        android:text="申请加入"/>
 </LinearLayout>
